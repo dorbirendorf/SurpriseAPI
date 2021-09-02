@@ -9,7 +9,6 @@ const port = process.env.PORT || 3000
 
 app.get('/api/surprise' ,
     query('name','name is required').not().isEmpty(),
-    query('name','name is not valid').isAlphanumeric(),
     query('birth_year','birth year is requierd').not().isEmpty(),
     query('birth_year','birth year is not valid').isNumeric(),
     validateRequestSchema,
